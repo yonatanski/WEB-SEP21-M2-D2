@@ -19,19 +19,68 @@
     <title>Hello, world!</title>
     <style>
       body {
-        background-color: #00dbde;
-        background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+        background-color: #000000;
+
+        color: white;
       }
       .nav-bar {
         background-color: rgba(26, 16, 34, 0.72);
         height: 7vh;
       }
+      section {
+        min-height: 93vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /*  */
+      .album-container {
+        text-align: center;
+        padding-bottom: 1em;
+        margin: 1em;
+      }
+
+      .album-container img {
+        width: 300px;
+        height: 250px;
+      }
+
+      .album-title {
+        margin-top: 0.5em;
+        margin-bottom: 0.25em;
+        font-size: 1.3em;
+      }
+      /*  */
+      #best-album {
+        background-color: teal;
+      }
+      /*  */
+      #Hall-of-shame {
+        background-color: rgb(38, 0, 128);
+      }
+      /*  */
+      #best-artist {
+        background-color: rgb(0, 128, 75);
+      }
+      #tapestry {
+        background-color: rgb(147, 198, 207);
+      }
+      /* section {
+        min-height: 93vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      } */
     </style>
   </head>
   <body>
+    <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must link every section in your page.
+        -->
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg nav-bar navbar-dark sticky-top">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">MUSIC</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -47,89 +96,159 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+            <a class="nav-link" href="#favourite-albums"
+              >Favourite Album <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#best-album">Best Album</a>
           </li>
-
           <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
+            <a class="nav-link" href="#Hall-of-shame">Hall of Shame</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Best Artist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">The Tapestry</a>
           </li>
         </ul>
       </div>
     </nav>
     <!-- End of nav bar -->
-    <section id="favourite-album">
+    <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller viewport)
+            - 2 albums per row when you are on a small screen
+        -->
+
+    <section id="favourite-albums ">
       <div class="container">
-        <div class="row py-5">
-          <div class="col-6 col-md-4 col-lg-3">
+        <div class="title">
+          <h2>Faourite Album</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="album-container">
-              <div class="card" style="width: 18rem">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+              <img src="asset/img-1.jpg" class="img-fluid" />
+              <h4 class="album-title">Black Panther</h4>
+              <span class="album-artist">Kedric Lamr</span>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-2.jfif" class="img-fluid" />
+              <h4 class="album-title">Certified Lover Boy</h4>
+              <span class="album-artist">Drake</span>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-3.jfif" class="img-fluid" />
+              <h4 class="album-title">Scorpion</h4>
+              <span class="album-artist">Drake</span>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-4.jfif" class="img-fluid" />
+              <h4 class="album-title">The Album</h4>
+              <span class="album-artist">Kingande</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-4.jfif" class="img-fluid" />
+              <h4 class="album-title">Toosie slide</h4>
+              <span class="album-artist">Drake</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-5.jfif" class="img-fluid" />
+              <h4 class="album-title">Matter Fixed</h4>
+              <span class="album-artist">Marlon Rodute</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-4.jfif" class="img-fluid" />
+              <h4 class="album-title">Mature Themes</h4>
+              <span class="album-artist">Ariel Pink</span>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="album-container">
+              <img src="asset/img-5.jfif" class="img-fluid" />
+              <h4 class="album-title">Care Package</h4>
+              <span class="album-artist">Drake</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- EXERCISE 4
+            Create a section for the album reviews.
+            Pick one of your favourite albums, and create a section with:
+            - Cover Image
+            - Title
+            - Band
+            - Duration
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+    <hr />
+    <hr />
+    <section id="best-album">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <img src="asset/img-5.jfif" alt="" width="300px" height="300px" />
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae, numquam vero iure officiis porro delectus, fuga eum
+              impedit praesentium molestiae ratione perferendis autem explicabo
+              recusandae similique id laborum illum ipsam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EXERCISE 5
+            Worst album list! Choose the albums you dislike or some you think are overrated and list it
+            in this "hall of shame" chart! 
+        -->
+    <section id="Hall-of-shame"></section>
 
-    <!-- nav bar -->
+    <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are a fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+    <section id="best-artist"></section>
+    <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "squared" (use CSS to achieve that).
+            Put at least 20 covers (also repeated) to have a nice tapestry effect and see how Bootstrap handles it.
+        -->
+    <section id="tapestry"></section>
+    <footer>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+        accusantium asperiores distinctio iste perspiciatis dignissimos tempora
+        officiis . Quis, assumenda temporibus animi expedita, voluptate omnis
+        voluptates ab iusto, neque rerum sed?
+      </p>
+    </footer>
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links.
+        -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
