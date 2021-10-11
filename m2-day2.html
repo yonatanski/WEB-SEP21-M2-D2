@@ -15,7 +15,10 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <!-- Bootstrap CSS -->
+   
     <title>Hello, world!</title>
     <!-- EXERCISE 1 -->
     <style>
@@ -93,6 +96,103 @@
 #best-artist h5{
   font-size: xx-large;
 }
+ /* Ex 7 */
+ .album-tapestry {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .squared {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        margin: 10px auto;
+      }
+      /* for tapestry */
+      h1 {
+        color: white;
+        font-size: 36px;
+       
+      }
+
+      .image-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+
+      .media {
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .media:hover {
+        cursor: pointer;
+      }
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+
+      .media:hover .overlay {
+        opacity: 1;
+      }
+      .nav-logo{
+        width:40px;
+
+      }
+
+      img {
+        width: 100%;
+        z-index: -1;
+        margin: auto;
+        transform: scale(1);
+        transition: all ease-in-out 0.5s;
+      }
+
+      .media:hover img {
+        transform: scale(1.1);
+        filter: blur(2px);
+      }
+
+      .image-details {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        z-index: 4;
+        position: absolute;
+        top: 100%;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+      }
+
+      .media:hover .image-details {
+        top: 40%;
+        opacity: 1;
+      }
+
+      @media only screen and (max-width: 900px) {
+        .media {
+          width: 70%;
+          height: 70%;
+        }
+      }
+      /* for tapestry */
       /* section {
         min-height: 93vh;
         display: flex;
@@ -107,8 +207,8 @@
             This navigation bar must link every section in your page.
         -->
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg nav-bar navbar-dark sticky-top">
-      <a class="navbar-brand" href="#"><img src="asset/navlogo.png" alt="" width="40px" height="">Musicfy</a>
+    <nav id="up-arrow" class="navbar navbar-expand-lg nav-bar navbar-dark sticky-top">
+      <a class="navbar-brand" href="#"><img class="nav-logo" src="asset/navlogo.png" alt="" width="40px" height="">Musicfy</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -135,10 +235,10 @@
             <a class="nav-link" href="#Hall-of-shame">Hall of Shame</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Best Artist</a>
+            <a class="nav-link" href="#best-artist">Best Artist</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">The Tapestry</a>
+            <a class="nav-link" href="#tapestery">The Tapestry</a>
           </li>
         </ul>
       </div>
@@ -152,7 +252,7 @@
             - 2 albums per row when you are on a small screen
         -->
 
-    <section id="favourite-albums ">
+    <section id="favourite-albums">
       <div class="container">
         <div class="title">
           <h2>Faourite Album</h2>
@@ -235,7 +335,7 @@
     <section id="best-album">
       <div class="container">
         <div class="title">
-          <h2 style="color: rgb(253, 29, 8);">Faourite Album</h2>
+          <h2 style="color: rgb(0, 0, 0);">Best Album</h2>
         </div>
         <div class="row justify-content-around align-items-center">
           <div class="col-12 col-md-6">
@@ -270,7 +370,7 @@
         <div class="row">
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
           <div class="card" >
-            <img src="asset/img-1.jpg" class="card-img-top" alt="...">
+            <img src="asset/img-3.jfif" class="card-img-top" alt="...">
             <div class="card-body bg-dark">
               <h5 class="card-title">Worst Album</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -357,11 +457,125 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      
      
     
     </section>
+     <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "squared" (use CSS to achieve that).
+            Put at least 20 covers (also repeated) to have a nice tapestry effect and see how Bootstrap handles it.
+        -->
+<section id="tapestery">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-12">
+        <h1 class="">The Tapestry </h1>
+      </div>
+
+      <div class="col-12 album-tapestry">
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+        <img
+          src="asset/img-4.jfif"
+          class="img-fluid squared"
+        />
+      </div>
+    </div>
+  </div>
+</section>
     <footer>
       
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links.
+        -->
+      <div class="container-fluid text-center bg-info">
+        <div class="px-5 mb-2 mt-3">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-instagram"></i> 
+          <i class="bi bi-youtube"></i>
+
+        </div>
+        <div class="mt- py-5">
+           Musicfy.com, &copy; 2021, all rights reserved
+        </div>
+       
+        <div class="">
+        <a href="m2-day2.html"><i class="bi bi-arrow-up-square-fill mb-5"></a></i>
+      </div>
+     
+    </div>
     </footer>
 
     <!-- EXERCISE 8
