@@ -98,6 +98,10 @@
 #best-artist h5{
   font-size: xx-large;
 }
+.nav-logo{
+        width:40px;
+
+      }
  /* Ex 7 */
  .album-tapestry {
         display: flex;
@@ -117,47 +121,10 @@
        
       }
 
-      .image-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 60%;
-        margin: auto;
-        margin-bottom: 50px;
-      }
+     
 
-      .media {
-        width: 30%;
-        height: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .media:hover {
-        cursor: pointer;
-      }
-
-      .overlay {
-        background: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: 3;
-        opacity: 0;
-        transition: all ease-in-out 0.5s;
-      }
-
-      .media:hover .overlay {
-        opacity: 1;
-      }
-      .nav-logo{
-        width:40px;
-
-      }
+      
+      
 
       img {
         width: 100%;
@@ -167,26 +134,10 @@
         transition: all ease-in-out 0.5s;
       }
 
-      .media:hover img {
-        transform: scale(1.1);
-        filter: blur(2px);
-      }
 
-      .image-details {
-        text-align: center;
-        color: white;
-        font-size: 20px;
-        z-index: 4;
-        position: absolute;
-        top: 100%;
-        opacity: 0;
-        transition: all ease-in-out 0.5s;
-      }
+     
 
-      .media:hover .image-details {
-        top: 40%;
-        opacity: 1;
-      }
+     
 
       @media only screen and (max-width: 900px) {
         .media {
@@ -552,6 +503,11 @@
           src="asset/img-4.jfif"
           class="img-fluid squared"
         />
+        <img
+        src="asset/img-4.jfif"
+        class="img-fluid squared"
+      />
+        
       </div>
     </div>
   </div>
